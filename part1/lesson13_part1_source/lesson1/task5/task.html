@@ -1,0 +1,77 @@
+<html>
+
+<h2>Задача 5</h2>
+
+<p>Прочитайте код, там роут поддерживающий фильтрацию по полю price с операцией equal, надо добавить поддержку
+    фильтрации Greater Than (gt) и Lower Than (lt)</p>
+
+Примеры ответов:
+<p>URL: /get_tickets?price=gt:19000</p>
+
+<div>
+    [
+    {
+    "from": {
+    "country": "Russia",
+    "airport": "DME",
+    },
+    "to": {
+    "country": "USA",
+    "airport": "LAX",
+    },
+    "price": 78634,
+    "available": True,
+    "date": "2011-03-16",
+    },
+    {
+    "from": {
+    "country": "Russia",
+    "airport": "SVO",
+    },
+    "to": {
+    "country": "USA",
+    "airport": "ATL",
+    },
+    "price": 87909,
+    "available": False,
+    "date": "2011-03-14",
+    }
+    ]
+</div>
+
+<br>
+
+<p>URL: /get_tickets?price=lt:87909</p>
+
+<div>
+    [
+    {
+    "from": {
+    "country": "Russia",
+    "airport": "DME",
+    },
+    "to": {
+    "country": "USA",
+    "airport": "LAX",
+    },
+    "price": 78634,
+    "available": True,
+    "date": "2011-03-16",
+    },
+    {
+    "from": {
+    "country": "Russia",
+    "airport": "VKO",
+    },
+    "to": {
+    "country": "USA",
+    "airport": "ORD",
+    },
+    "price": 19000,
+    "available": True,
+    "date": "2011-02-11",
+    },
+    ]
+</div>
+
+</html>

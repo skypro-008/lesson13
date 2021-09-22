@@ -1,0 +1,168 @@
+{
+  "environment" : "unittest",
+  "summary" : "This is an introductory Python course.\n- The course will be most beneficial for beginner-level Python learners.\n- The course covers core Python features.\n- It contains hands-on examples of Python code implementation and exercises to practice new skills.\n- The course is based on the author's personal experience in Python development.",
+  "title" : "lesson_13_part_2_course",
+  "authors" : [
+    "Skypro"
+  ],
+  "programming_language" : "Python",
+  "language" : "en",
+  "course_type" : "PyCharm",
+  "items" : [
+    {
+      "title" : "lesson1",
+      "task_list" : [
+        {
+          "name" : "task1",
+          "files" : {
+            "__init__.py" : {
+              "name" : "__init__.py",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : ""
+            },
+            "tests/__init__.py" : {
+              "name" : "tests/__init__.py",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : ""
+            },
+            "tests/test_task.py" : {
+              "name" : "tests/test_task.py",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import unittest\n\nimport requests as requests\nfrom task import username, repository_name\n\n\nclass TestCase(unittest.TestCase):\n    def test_requirements_file(self):\n        url = f\"https://raw.githubusercontent.com/{username}/{repository_name}/main/README.md\"\n        resp = requests.get(url=url)\n        self.assertEqual(resp.status_code, 200, msg=\"Файла README.md нет в репозитории, в ветке main, \"\n                                                    \"либо он находится не в корне проекта\")\n        url = f\"https://raw.githubusercontent.com/{username}/{repository_name}/develop/app.py\"\n        resp = requests.get(url=url)\n        self.assertEqual(resp.status_code, 200, msg=\"Файла app.py нет в репозитории, в ветке develop, \"\n                                                    \"либо он находится не в корне проекта\")"
+            },
+            "task.py" : {
+              "name" : "task.py",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "\"\"\"\n    D переменную username необходимо указать логин от GitHub\n    D переменную repository_name необходимо указать точное имя репозитория\n\n    Взять эти данные можно из URL, например открываем репозиторий в GitHub в браузере\n    и видим в строке браузера следующую ссылку:\n    https://github.com/858683/lesson_13_p2\n    где:\n    username = '858683'\n    repository_name = 'lesson_13_p2'\n\"\"\"\nusername = ''\nrepository_name = ''\n"
+            }
+          },
+          "description_text" : "# Ветки\n\nСоздайте публичный гит репозиторий в GitHub.\n\nЕсть ветка main.\n\nСоздать ветку develop.\n\nВ ветку main закоммитить файл README.md.\n\nВ ветку develop закоммитить файл app.py.\n",
+          "description_format" : "MD",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "edu"
+        },
+        {
+          "name" : "task2",
+          "files" : {
+            "__init__.py" : {
+              "name" : "__init__.py",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : ""
+            },
+            "tests/__init__.py" : {
+              "name" : "tests/__init__.py",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : ""
+            },
+            "tests/test_task.py" : {
+              "name" : "tests/test_task.py",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import unittest\n\nimport requests as requests\nfrom task import username, repository_name\n\n\nclass TestCase(unittest.TestCase):\n    def test_requirements_file(self):\n        url = f\"https://raw.githubusercontent.com/{username}/{repository_name}/main/app.py\"\n        resp = requests.get(url=url)\n        self.assertEqual(resp.status_code, 200, msg=\"Файла app.py нет в репозитории, в ветке main, \"\n                                                    \"либо он находится не в корне проекта\")"
+            },
+            "task.py" : {
+              "name" : "task.py",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "\"\"\"\n    D переменную username необходимо указать логин от GitHub\n    D переменную repository_name необходимо указать точное имя репозитория\n\n    Взять эти данные можно из URL, например открываем репозиторий в GitHub в браузере\n    и видим в строке браузера следующую ссылку:\n    https://github.com/858683/lesson_13_part_2_ep4\n    где:\n    username = '858683'\n    repository_name = 'lesson_13_part_2_ep4'\n\"\"\"\nusername = ''\nrepository_name = ''\n"
+            }
+          },
+          "description_text" : "# Слияние веток\n\nВыполнить слияние develop → main.",
+          "description_format" : "MD",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "edu"
+        },
+        {
+          "name" : "task5",
+          "files" : {
+            "task.py" : {
+              "name" : "task.py",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "\"\"\"\n    D переменную username необходимо указать логин от GitHub\n    D переменную repository_name необходимо указать точное имя репозитория\n\n    Взять эти данные можно из URL, например открываем репозиторий в GitHub в браузере\n    и видим в строке браузера следующую ссылку:\n    https://github.com/858683/lesson13_part2_ep5\n    где:\n    username = '858683'\n    repository_name = 'lesson13_part2_ep5'\n\"\"\"\nusername = ''\nrepository_name = ''\n"
+            },
+            "tests/test_task.py" : {
+              "name" : "tests/test_task.py",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import unittest\n\nimport requests as requests\nfrom task import username, repository_name\n\n\nclass TestCase(unittest.TestCase):\n    def test_requirements_file(self):\n        url = f\"https://raw.githubusercontent.com/{username}/{repository_name}/main/README.md\"\n        resp = requests.get(url=url)\n        self.assertEqual(resp.status_code, 200, msg=\"Файла README.md нет в репозитории, в ветке main.\")"
+            },
+            "__init__.py" : {
+              "name" : "__init__.py",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : ""
+            },
+            "tests/__init__.py" : {
+              "name" : "tests/__init__.py",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : ""
+            }
+          },
+          "description_text" : "# Отмена изменений и коммитов\n\nhttps://github.com/858683/lesson13_part2_ep5\n\nСклонировать репозиторий, в котором последний коммит это удаление файла README.md.\nВыполнить revert этого коммита.\n",
+          "description_format" : "MD",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "edu"
+        },
+        {
+          "name" : "task8",
+          "files" : {
+            "task.py" : {
+              "name" : "task.py",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "\"\"\"\n    D переменную username необходимо указать логин от GitHub\n    D переменную repository_name необходимо указать точное имя репозитория\n\n    Взять эти данные можно из URL, например открываем репозиторий в GitHub в браузере\n    и видим в строке браузера следующую ссылку:\n    https://github.com/858683/testt\n    где:\n    username = '858683'\n    repository_name = 'testt'\n\"\"\"\n\npull_request_number = '1'\nusername = ''\nrepository_name = ''\n"
+            },
+            "tests/test_task.py" : {
+              "name" : "tests/test_task.py",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import unittest\n\nimport requests as requests\nfrom task import username, repository_name, pull_request_number\n\n\nclass TestCase(unittest.TestCase):\n    def test_requirements_file(self):\n        url = f\"https://github.com/{username}/{repository_name}/pull/{pull_request_number}\"\n        resp = requests.get(url=url)\n        self.assertEqual(resp.status_code, 200, msg=f\"Pull реквеста с номером {pull_request_number} нет\")"
+            },
+            "__init__.py" : {
+              "name" : "__init__.py",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : ""
+            },
+            "tests/__init__.py" : {
+              "name" : "tests/__init__.py",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : ""
+            }
+          },
+          "description_text" : "# Pull Request в GitHub\n\nСоздайте ветку. Закомитьте текстовый файл с содержанием:\n\nPush me\n\nЗапушьте ветку в GItHub.\n\nОткройте браузер, перейдите на сайт https://github.com, далее откройте свой репозиторий и создайте Pull Request с текстовым файлом ",
+          "description_format" : "MD",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "edu"
+        }
+      ],
+      "type" : "lesson"
+    }
+  ],
+  "additional_files" : [
+    {
+      "name" : "requirements.txt",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "certifi==2021.5.30\ncharset-normalizer==2.0.4\nidna==3.2\nrequests==2.26.0\nurllib3==1.26.6\n"
+    }
+  ],
+  "version" : 11
+}

@@ -1,0 +1,1 @@
+[{"id": 1, "name": "Ivan", "age": 34, "is_blocked": false}, {"id": 2, "name": "Peter", "age": 23, "is_blocked": true}]
