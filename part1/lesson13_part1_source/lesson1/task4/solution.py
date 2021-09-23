@@ -7,8 +7,8 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
-@app.route('/something/<str:test>')
-def user_salary(test: str):
+@app.route('/something/<string:test>')
+def something_salary(test: str):
     sort = request.args.get('sort')
     r = {
         "name": test,
